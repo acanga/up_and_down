@@ -1,2 +1,2 @@
-module CustomerActivityReportsHelper
+module StockholderBaseReportsHelper
 end

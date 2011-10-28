@@ -1,2 +1,2 @@
-class CustomerActivityReportsController < InheritedResources::Base
+class StockholderBaseReportsController < InheritedResources::Base
 end

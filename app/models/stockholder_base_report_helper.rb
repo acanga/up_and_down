@@ -1,2 +1,2 @@
-class CustomerActivityReport < ActiveRecord::Base
+class StockholderBaseReport < ActiveRecord::Base
 end
