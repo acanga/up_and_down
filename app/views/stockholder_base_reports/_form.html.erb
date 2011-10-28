@@ -2,10 +2,11 @@
   <%= render :partial => "resource_errors", :locals => { :resource => @stockholder_base_report } %>
   
   <div>
-     <%= f.label :excel_report, "Arquivo (formato .xls ou .xlsx)" %>      
+     <%= f.label :excel_report, "Arquivo (formato .xls ou .xlsx)" %><br>
+     <%= f.file_field :excel_report %>
   </div>  
   
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Cadastrar" %>
   </div>
 <% end %>
