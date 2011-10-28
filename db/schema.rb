@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111028124931) do
+ActiveRecord::Schema.define(:version => 20111028163450) do
+
+  create_table "stockholder_base_report", :force => true do |t|
+    t.string   "excel_report"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
