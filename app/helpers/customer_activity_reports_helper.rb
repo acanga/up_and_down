@@ -1,0 +1,2 @@
+module CustomerActivityReportsHelper
+end
