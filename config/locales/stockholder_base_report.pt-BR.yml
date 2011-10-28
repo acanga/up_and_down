@@ -8,6 +8,7 @@
           attributes:
             excel_report:
               blank: "É preciso selecionar um arquivo excel"  
+              invalid: "Arquivo inválido, você precisa selecionar um arquivo .xls ou .xlsx"
     models:
       stockholder_base_report: "relatório de movimentação de acionistas"    
     attributes:

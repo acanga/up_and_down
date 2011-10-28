@@ -17,9 +17,9 @@ class ExcelReportUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  def extension_white_list
-    %w(xls xlsx)
-  end
+  # def extension_white_list
+  #   %w(xls xlsx)
+  # end
 
   # def filename
   #   "something.jpg" if original_filename
