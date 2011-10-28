@@ -6,3 +6,4 @@
       user: 
         password: "Senha"
         password_confirmation: "confirmação de senha"  
+        remember_me: "Manter logado"
