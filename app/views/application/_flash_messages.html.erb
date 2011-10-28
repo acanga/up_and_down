@@ -1,23 +1,23 @@
-<% if not notice.blank? %>
-  <div class="message success">
-    <p><%= notice %></p>
-  </div>
+<% if flash[:notice].present? %>
+  <p>
+    <%= notice %>
+  </p>
 <% end %>
 
-<% if not flash[:info].blank? %>
-  <div class="message info">
-    <p><%= flash[:info] %></p>
-  </div>
+<% if flash[:alert].present? %>
+  <p>
+    <%= alert %>
+  </p>
 <% end %>
 
-<% if not flash[:warning].blank? %>
-  <div class="message warning">
-    <p><%= flash[:warning] %></p>
-  </div>
+<% if flash[:error].present? %>
+  <p>
+    <%= flash[:error] %>
+  </p>
 <% end %>
 
-<% if not alert.blank? %>
-  <div class="message errormsg">
-    <p><%= alert %></p>
-  </div>
+<% if flash[:warning].present? %>
+  <p>
+    <%= flash[:warning] %>
+  </p>
 <% end %>
