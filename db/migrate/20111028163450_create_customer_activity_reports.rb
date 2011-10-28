@@ -1,6 +1,6 @@
-class CreateCustomerActivityReports < ActiveRecord::Migration
+class CreateStockholderBaseReports < ActiveRecord::Migration
   def change
-    create_table :customer_activity_reports do |t|
+    create_table :stockholder_base_report do |t|
 
       t.timestamps
     end
