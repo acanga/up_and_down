@@ -1,25 +1,23 @@
 module HeadHelpers
-  def page(page_options = {})
-    page_title page_options[:title] 
+  def page(title, page_options = {})
+    page_title title
     page_stylesheets page_options[:stylesheets]
     page_javascripts page_options[:javascripts]
   end
 
   protected
     def page_title(title)
-      if title
-        provide(:page_title) { title } 
-      end
+      provide(:page_title) { title } 
     end
 
-    def page_stylesheets(*stylesheets)
-      if stylesheets and stylesheets.compact.any?
+    def page_stylesheets(stylesheets)
+      if stylesheets
         provide(:page_stylesheets) { stylesheet_link_tag(*stylesheets) } 
       end
     end
 
-    def page_javascripts(*javascripts)
-      if javascripts and javascripts.compact.any?
+    def page_javascripts(javascripts)
+      if javascripts
         provide(:page_javascripts) { javascript_include_tag(*javascripts) }
       end
     end
