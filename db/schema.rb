@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20111028163450) do
 
-  create_table "stockholder_base_report", :force => true do |t|
+  create_table "stockholder_base_reports", :force => true do |t|
     t.string   "excel_report"
     t.datetime "created_at"
     t.datetime "updated_at"
