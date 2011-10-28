@@ -14,6 +14,7 @@ module UpAndDown
     )
 
     config.encoding = "utf-8"    
+    config.i18n.default_locale = "pt-BR"
     config.active_record.identity_map = true
     config.filter_parameters += [:password, :password_confirmation]
     
