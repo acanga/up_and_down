@@ -1,0 +1,15 @@
+"pt-BR":
+  errors:
+    
+  activerecord:
+    errors:
+      models:
+        stockholder_base_report:
+          attributes:
+            excel_report:
+              blank: "É preciso selecionar um arquivo excel"  
+    models:
+      stockholder_base_report: "relatório de movimentação de acionistas"    
+    attributes:
+      stockholder_base_report: 
+        excel_report: ""
