@@ -1,2 +1,3 @@
 class StockholderBaseReport < ActiveRecord::Base
-end
+  mount_uploder :excel_report, ExcelReportUploader
+end                                                
