@@ -1,16 +1,10 @@
 <%= form_for(@stockholder_base_report) do |f| %>
-  <% if @stockholder_base_report.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@stockholder_base_report.errors.count, "error") %> prohibited this stockholder_base_report from being saved:</h2>
-
-      <ul>
-      <% @stockholder_base_report.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= render :partial => "resource_errors", :locals => { :resource => @stockholder_base_report } %>
+  
+  <div>
+     <%= f.label :excel_report, "Arquivo (formato .xls ou .xlsx)" %>      
+  </div>  
+  
   <div class="actions">
     <%= f.submit %>
   </div>
