@@ -1,4 +1,4 @@
-<h1>Listing customer_activity_reports</h1>
+<h1>Listing stockholder_base_reports</h1>
 
 <table>
   <tr>
@@ -7,15 +7,15 @@
     <th></th>
   </tr>
 
-<% @customer_activity_reports.each do |customer_activity_report| %>
+<% @stockholder_base_reports.each do |stockholder_base_report| %>
   <tr>
-    <td><%= link_to 'Show', customer_activity_report %></td>
-    <td><%= link_to 'Edit', edit_customer_activity_report_path(customer_activity_report) %></td>
-    <td><%= link_to 'Destroy', customer_activity_report, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', stockholder_base_report %></td>
+    <td><%= link_to 'Edit', edit_stockholder_base_report_path(stockholder_base_report) %></td>
+    <td><%= link_to 'Destroy', stockholder_base_report, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Customer activity report', new_customer_activity_report_path %>
+<%= link_to 'New Customer activity report', new_stockholder_base_report_path %>

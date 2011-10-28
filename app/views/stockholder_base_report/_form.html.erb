@@ -1,10 +1,10 @@
-<%= form_for(@customer_activity_report) do |f| %>
-  <% if @customer_activity_report.errors.any? %>
+<%= form_for(@stockholder_base_report) do |f| %>
+  <% if @stockholder_base_report.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@customer_activity_report.errors.count, "error") %> prohibited this customer_activity_report from being saved:</h2>
+      <h2><%= pluralize(@stockholder_base_report.errors.count, "error") %> prohibited this stockholder_base_report from being saved:</h2>
 
       <ul>
-      <% @customer_activity_report.errors.full_messages.each do |msg| %>
+      <% @stockholder_base_report.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
