@@ -1,5 +1,5 @@
-module ExcelReport
-  extend ActiveSupport::Concerns
+module StockholderBaseReport::ExcelReport
+  extend ActiveSupport::Concern
 
   included do
     mount_uploader :excel_report, ExcelReportUploader
