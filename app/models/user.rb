@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :stockholder_base_reports
+  
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable
 
