@@ -6,6 +6,7 @@ gem "jquery-rails"
 gem "devise"
 gem "inherited_resources"
 gem "carrierwave"
+gem "roo"
 
 group :development do
   gem "sqlite3"
