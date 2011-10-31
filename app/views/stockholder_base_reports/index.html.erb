@@ -1,21 +1,42 @@
-<h1>Listing stockholder_base_reports</h1>
+<p class="titulo">
+  <%= image_tag "icone_titulo.png" %> Movimentação dos Acionistas
+</p>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Adicionar arquivo excel</h1>
 
-<% @stockholder_base_reports.each do |stockholder_base_report| %>
+<%= render 'form' %>
+
+<br>
+
+<table class="tab_conteudo">
   <tr>
-    <td><%= link_to 'Show', stockholder_base_report %></td>
-    <td><%= link_to 'Edit', edit_stockholder_base_report_path(stockholder_base_report) %></td>
-    <td><%= link_to 'Destroy', stockholder_base_report, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+      <th>NOME</th>
+        <th>TIPO (Física / Jurídica)</th>
+        <th>CPF/CNPJ</th>
+        <th>QUANTIDADE AÇÕES PN</th>
+        <th>% PN</th>
+        <th>QUANTIDADE AÇÕES ON</th>
+        <th>% ON</th>
+        <th>TOTAL (PN + ON)</th>
+    </tr>
+    <tr>
+      <td>Caroline Santos Daltro Bosisio</td>
+        <td>Física</td>
+        <td>108307307-96</td>
+        <td class="cor_azul">45</td>
+        <td class="cor_verde">5</td>
+        <td class="cor_vermelha">70</td>
+        <td class="cor_azul">6</td>
+        <td>115</td>
+    </tr>
+    <tr>
+      <td>Elomar do Nascimento</td>
+        <td>Jurídica</td>
+        <td>108386307-42</td>
+        <td class="cor_verde">45</td>
+        <td class="cor_verde">5</td>
+        <td class="cor_azul">70</td>
+        <td class="cor_azul">6</td>
+        <td>115</td>
+    </tr>
 </table>
-
-<br />
-
-<%= link_to 'New Customer activity report', new_stockholder_base_report_path %>

@@ -14,12 +14,25 @@
     <title><%= content_for :page_title %> - Up and Down</title>
   </head>
   <body>
-    <%= render :partial => "flash_messages" %>
+    <div id="geral">
+      <div id="logo">
+        <%= link_to image_tag("logo_up_down.png", :border => :none), root_path %>
+      </div>
 
-    <%= yield %>  
+      <br clear="all" />
 
-    <% if not user_signed_in? %>
-      <%= render :partial => "devise_links" %>
-    <% end %>
+      <div id="logado">
+        <p>
+          Olá, <span class="none"><%= current_user.email %></span> |
+          <%= link_to "Sair", destroy_user_session_path %>
+        </p>
+      </div>
+
+      <div id="conteudo">
+        <%= render :partial => "flash_messages" %>
+      
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
