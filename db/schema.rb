@@ -11,11 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111028163450) do
+ActiveRecord::Schema.define(:version => 20111031123310) do
 
   create_table "stockholder_base_reports", :force => true do |t|
     t.integer  "user_id"
     t.string   "excel_report"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stockholders", :force => true do |t|
+    t.string   "name"
+    t.string   "kind"
+    t.string   "cpf"
+    t.string   "cnpj"
+    t.integer  "amount_of_stocks_pn"
+    t.float    "pn_percentage"
+    t.integer  "amount_of_stocks_on"
+    t.float    "on_percentage"
+    t.integer  "total_stocks"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
