@@ -8,6 +8,7 @@ gem "inherited_resources"
 gem "carrierwave"
 gem "rubyzip"
 gem "roo"
+gem "resque", :require => 'resque/server' 
 
 group :development do
   gem "sqlite3"
