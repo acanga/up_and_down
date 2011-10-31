@@ -1,5 +1,6 @@
 class StockholderBaseReport < ActiveRecord::Base
   belongs_to :user
+  has_many :stockholders
   
   mount_uploader :excel_report, ExcelReportUploader
   

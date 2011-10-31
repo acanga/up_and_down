@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20111031123310) do
   end
 
   create_table "stockholders", :force => true do |t|
+    t.integer  "stockholder_base_report_id"
     t.string   "name"
     t.string   "kind"
     t.string   "cpf"

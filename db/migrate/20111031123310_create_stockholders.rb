@@ -1,6 +1,7 @@
 class CreateStockholders < ActiveRecord::Migration
   def change
     create_table :stockholders do |t|
+      t.references :stockholder_base_report
       t.string :name
       t.string :kind
       t.string :cpf
