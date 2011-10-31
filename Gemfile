@@ -6,6 +6,7 @@ gem "jquery-rails"
 gem "devise"
 gem "inherited_resources"
 gem "carrierwave"
+gem "rubyzip"
 gem "roo"
 
 group :development do
