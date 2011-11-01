@@ -1,4 +1,6 @@
 class StockholderBaseReportsController < InheritedResources::Base
+  respond_to :html, :json, :xml, :js
+
   before_filter :authenticate_user!
 
   def index
