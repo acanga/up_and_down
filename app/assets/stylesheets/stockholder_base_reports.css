@@ -1,4 +1,27 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+#upload_feedback 
+{
+  margin-left: 170px;
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+#upload_feedback p 
+{
+  float: left;
+  font-size: 14px;
+}
+
+.loading 
+{
+  margin: 1px 0 0 5px;
+}
+
+.error
+{
+  color: #E6503B;
+}
+
+.hidden_submit
+{
+  display: none
+}
