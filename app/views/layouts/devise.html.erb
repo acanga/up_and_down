@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "application" %> 
+    <%= content_for :page_stylesheets %>
+
+    <%= javascript_include_tag "application" %>
+    <%= content_for :page_javascripts %>
+
+    <title><%= content_for :page_title %> - Up & Down</title>
+  </head>   
+  <body>
+   	<div id="geral">
+      <div id="logo_login"> 
+        <a href="#"><%= image_tag("logo_up_down.png", :border => :none) %></a>
+      </div><br clear="all" />
+
+      <div id="login">   
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
