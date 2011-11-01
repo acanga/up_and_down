@@ -1,0 +1,4 @@
+#cadastrar
+{
+  background: url(<%= asset_path "btn_cadastrar.png" %>) no-repeat;
+}
