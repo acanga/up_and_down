@@ -1,19 +1,27 @@
-<h2>Login</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div>
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  </div>
-
-  <div>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-
-  <div>
-    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
-  </div>
-
-  <div><%= f.submit "Entrar" %></div>
-<% end %>
+<p class="tit_login">
+  <%= image_tag("icone_login.png") %> LOGIN
+</p><br />
+ 
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>   
+  <table>
+  	<tr>
+    	<td><%= f.label :email %></td>
+      <td><%= f.email_field :email, :size => 25 %></td>
+    </tr>
+    
+    <tr>
+      <td><%= f.label :password %></td>
+      <td><%= f.password_field :password, :size => 25 %></td>
+    </tr> 
+    
+    <tr>
+      <td colspan="2"><%= f.check_box :remember_me %> <%= f.label :remember_me %></td>
+    </tr>  
+    
+    <tr>
+    	<td colspan="2" align="right">
+    	  <a href="#"><%= f.submit "", :class => :submit, :id => :submit_login %></a>      
+    	</td>
+    </tr>
+  </table><br clear="all" /> 
+<% end %>  
