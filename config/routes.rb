@@ -4,7 +4,6 @@ UpAndDown::Application.routes.draw do
   
   resources :stockholder_base_reports, :actions => [ :new, :create, :index ], :path => "relatorio_de_movimentacao_dos_acionistas", 
     :path_names =>  { :new => "cadastrar" }
-  post "/relatorio_de_movimentacao_dos_acionistas/cadastrar" => "stockholder_base_reports#create", :as => :create_stockholder_base_report
 
   root :to => "stockholder_base_reports#index"
 end
