@@ -1,2 +1,16 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(document).ready(function()
+{
+  $('#new_stockholder_base_report').change(function()
+  {
+    $('#upload_feedback').remove();
+
+    var loadingImagePath = '<%= asset_path "loading.gif" %>';
+
+    $('#new_stockholder_base_report input[type=file]').parent().after('<div id="upload_feedback"></div>');
+    $('#upload_feedback').append('<p>Iniciando upload do relatório</p>');
+    $('#upload_feedback').append('<p class="loading"><img src="' + loadingImagePath + '"></p>');
+    $("#upload_feedback p").effect("highlight", {}, 500);
+
+    $(this).submit();
+  });
+});
