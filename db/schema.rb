@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20111031123310) do
 
   create_table "stockholder_base_reports", :force => true do |t|
     t.integer  "user_id"
+    t.boolean  "processed",    :default => false
     t.string   "excel_report"
     t.datetime "created_at"
     t.datetime "updated_at"
