@@ -3,9 +3,8 @@ class StockholderBaseReportsController < InheritedResources::Base
 
   def index
     @stockholder_base_report = StockholderBaseReport.new
-    @stockholder_base_reports = StockholderBaseReport.scoped
-
-    respond_with @stockholder_base_reports
+    
+    index!
   end
   
   protected
