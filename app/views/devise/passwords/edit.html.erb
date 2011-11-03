@@ -1,20 +1,29 @@
 <p class="title">
    RESETAR SENHA
-</p><br />
+</p><br />     
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
+
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>      
+<%= render :partial => "flash_messages" %>  
+  
   <%= f.hidden_field :reset_password_token %>               
   
   <table>
     <tr>
       <td><%= f.label :password, "Nova senha" %></td>
-      <td><%= f.password_field :password, :size => 25 %></td>
+      <td><%= f.password_field :password, :size => 25 %></td> 
+      <% unless f.object.errors.empty? %>                                                           
+        <td><div class="field_with_errors"><%= f.object.errors[:password].to_sentence %></div></td> 
+      <% end %>
     </tr>  
 
     <tr>
       <td><%= f.label :password_confirmation, "Confirme a senha" %></td>
-      <td><%= f.password_field :password_confirmation, :size => 25 %></td>
+      <td><%= f.password_field :password_confirmation, :size => 25 %></td>  
+      <% unless f.object.errors.empty? %>                                                           
+        <td><div class="field_with_errors"><%= f.object.errors[:password_confirmation].to_sentence %></div></td> 
+      <% end %>
     </tr> 
     
     <tr>
