@@ -27,11 +27,9 @@
     	<td colspan="2" align="right">
     	  <%= f.submit "", :class => :submit, :id => :submit_login %>
     	</td>
-    </tr>
+    </tr>                                 
     
-    <tr>
-      <td><%= link_to "Cadastrar", new_user_registration_path %></td>
-      <td><%= link_to "Resetar senha", new_user_password_path %></td>
-    </tr>  
+    <%= render :partial => "links" %>
+    
   </table>
 <% end %>
