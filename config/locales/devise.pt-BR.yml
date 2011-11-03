@@ -20,7 +20,7 @@ pt-BR:
       timeout: 'A sua sessão expirou, por favor, faça login novamente para continuar.'
       inactive: 'A sua conta ainda não foi ativada.'
     sessions:
-      signed_in: 'Login efetuado com sucesso.'
+      signed_in: ''
       signed_out: 'Logout efetuado com sucesso.'
     passwords:
       send_instructions: 'Dentro de minutos, você receberá um email com as instruções de reinicialização da sua senha.'
@@ -29,7 +29,7 @@ pt-BR:
       send_instructions: 'Dentro de minutos, você receberá um email com as instruções de confirmação da sua conta.'
       confirmed: 'A sua conta foi confirmada com sucesso. Você está autenticado.'
     registrations:
-      signed_up: 'Login efetuado com sucesso.'
+      signed_up: ''
       inactive_signed_up: 'A sua conta foi criada com sucesso. No entanto, não foi possível fazer login, pois ela está %{reason}.'
       updated: 'A sua conta foi atualizada com sucesso.'
       destroyed: 'Adeus! A sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve.'
