@@ -1,5 +1,5 @@
 module ContentOfRowFetcher
-  def content_of_row(row)
+  def row(row)
     columns = []
     
     1.upto(last_column) do |column|
