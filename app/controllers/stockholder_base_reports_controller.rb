@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 class StockholderBaseReportsController < InheritedResources::Base
   actions :all, :except => [ :edit, :update, :show, :destroy ]
 
@@ -12,11 +10,14 @@ class StockholderBaseReportsController < InheritedResources::Base
   end
 
   def create
-    @stockholder_base_reports = StockholderBaseReport.scoped
-    @stockholder_base_report = current_user.stockholder_base_reports.create(params[:stockholder_base_report])
-    @new_stockholder_base_report = StockholderBaseReport.new
+    @stockholder_base_reports = current_user.stockholder_base_reports
+    @stockholder_base_report = current_user.stockholder_base_reports.new(params[:stockholder_base_report])
 
-    render :action => :index
+    if @stockholder_base_report.save
+      redirect_to stockholder_base_reports_path
+    else
+      render :action => :index
+    end
   end
   
   protected
