@@ -21,6 +21,7 @@ class Stockholder < ActiveRecord::Base
       :on_percentage => excel_row[4],
       :amount_of_stocks_pn => excel_row[5],
       :pn_percentage => excel_row[6],
-      :total_stocks => excel_row[7])
+      :total_stocks => excel_row[7],
+      :total_percentage => excel_row[8])
   end
 end

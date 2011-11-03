@@ -10,6 +10,7 @@ class CreateStockholders < ActiveRecord::Migration
       t.integer :amount_of_stocks_pn
       t.float :pn_percentage
       t.integer :total_stocks
+      t.float :total_percentage
 
       t.timestamps
     end
