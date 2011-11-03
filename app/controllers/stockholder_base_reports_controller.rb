@@ -1,5 +1,7 @@
+# encoding: utf-8
+
 class StockholderBaseReportsController < InheritedResources::Base
-  respond_to :html, :json, :xml, :js
+  actions :all, :except => [ :edit, :update, :show, :destroy ]
 
   before_filter :authenticate_user!
 
@@ -7,6 +9,14 @@ class StockholderBaseReportsController < InheritedResources::Base
     @stockholder_base_report = StockholderBaseReport.new
     
     index!
+  end
+
+  def create
+    @stockholder_base_reports = StockholderBaseReport.scoped
+    @stockholder_base_report = current_user.stockholder_base_reports.create(params[:stockholder_base_report])
+    @new_stockholder_base_report = StockholderBaseReport.new
+
+    render :action => :index
   end
   
   protected

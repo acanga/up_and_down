@@ -6,10 +6,12 @@ class StockholderBaseReportParser
     
     excel_report_file = excel_report_object_for stockholder_base_report
     excel_report_file.default_sheet = excel_report_file.sheets.first
-
-    6.upto(excel_report_file.last_row) do |line|
-      Stockholder.create(:name => excel_report_file.cell(line, 1))
+    
+    6.upto(excel_report_file.last_row - 1) do |row|
+      stockholder_base_report.stockholders.create_from_excel_row excel_report_file.row(row)
     end
+
+    stockholder_base_report.update_attribute(:parsed, true)
   end
   
   protected
