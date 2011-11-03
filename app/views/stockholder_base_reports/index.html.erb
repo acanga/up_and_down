@@ -1,32 +1,9 @@
-<%= page "Relatório da Movimentação dos Acionistas", :javascripts => "stockholder_base_reports" %>
+<%= page "Relatório de Movimentação dos Acionistas", :javascripts => "stockholder_base_reports" %>
 
 <% if @stockholder_base_reports.any? %>
-  <% if StockholderBaseReport.unparsed.any? %>
-    <p>Recebemos o seu relatório e estamos importando os seus dados. Em poucos minutos eles já estarão disponíveis.</p>
-  <% end %>
-
-  <% if not @stockholder_base_report.new_record? %>
-    <%= render :partial => "form", :locals => { :stockholder_base_report => @new_stockholder_base_report } %>       
-  <% else %>
-    <%= render :partial => "form", :locals => { :stockholder_base_report => @stockholder_base_report } %>
-  <% end %>
-
-  <br>
-
-  <% if not StockholderBaseReport.unparsed.any? %> 
-    <br>
-    
-    <%= render :partial => "stockholders/stockholders", :locals => { :stockholders => current_user.stockholders } %>
-  <% end %>
-</div>
+  <%= render :partial => "new_stockholder_base_reports_and_comparison_table" %>
 <% else %>
-  <p>
-    Seja bem vindo!
-  </p>
-
-  <p>Para começar a visualizar a atividade dos seus acionistas, você precisa importar relatórios.</p>
-
-  <%= render :partial => "form", :locals => { :stockholder_base_report => @stockholder_base_report } %>
+  <%= render :partial => "first_stockholder_base_report" %>
 <% end %>
 
 <br clear="all">
