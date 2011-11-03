@@ -10,6 +10,7 @@ module StockholderBaseReport::ExcelReport
     after_create :parse_excel_report
 
     scope :unparsed, where(:parsed => false)
+    scope :parsed, where(:parsed => true)
   end
   
   protected
