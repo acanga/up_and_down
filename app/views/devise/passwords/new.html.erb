@@ -1,7 +1,7 @@
 <%= page "Resetar Senha" %> 
 
 <p class="title">
-  Esqueceu sua senha?
+  <%= image_tag("icone_resetar.png") %> Esqueceu sua senha?
 </p><br />
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
@@ -16,7 +16,7 @@
     
    <tr>
     	<td colspan="2" align="right">
-    	  <%= f.submit "", :class => :submit, :id => :submit_login %>
+    	  <%= f.submit "", :class => :submit, :id => :submit_email %>
     	</td>
     </tr>   
     <td><%= link_to "Login", new_user_session_path %></td>

@@ -1,14 +1,17 @@
 <p class="title">
   <%= image_tag("icone_login.png") %> LOGIN
-</p><br />
+</p>                              
+
+<%= render :partial => "flash_messages" %>
  
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %> 
-  <%= render :partial => 'resource_errors', :locals => { :resource => resource } %>
+  
   
   <table>
   	<tr>
     	<td><%= f.label :email %></td>
-      <td><%= f.email_field :email, :size => 25 %></td>
+      <td><%= f.email_field :email, :size => 25 %></td>  
+      <%= f.object.errors[:email].to_sentence %> 
     </tr>
     
     <tr>
@@ -24,9 +27,11 @@
     	<td colspan="2" align="right">
     	  <%= f.submit "", :class => :submit, :id => :submit_login %>
     	</td>
-    </tr>   
+    </tr>
     
-    <td><%= link_to "Cadastrar", new_user_registration_path %></td>
-    <td><%= link_to "Resetar senha", new_user_password_path %></td>
-  </table><br clear="all" /> 
-<% end %>  
+    <tr>
+      <td><%= link_to "Cadastrar", new_user_registration_path %></td>
+      <td><%= link_to "Resetar senha", new_user_password_path %></td>
+    </tr>  
+  </table>
+<% end %>
