@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="UTF-8">
@@ -23,11 +24,15 @@
       <div id="logado">
         <p>
           Olá, <span class="none"><%= current_user.email %></span> |
-          <%= link_to "Sair", destroy_user_session_path %>
+          <%= link_to "Sair", destroy_user_session_path, :method => :delete %>
         </p>
       </div>
 
       <div id="conteudo">
+        <p class="titulo">
+          <%= image_tag "icone_titulo.png" %> <%= content_for :page_title %>
+        </p>
+
         <%= render :partial => "flash_messages" %>
       
         <%= yield %>

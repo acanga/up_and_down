@@ -7,7 +7,10 @@ module StockholderBaseReport::ExcelReport
     validates_presence_of :excel_report
     validates_format_of :excel_report, :with => /(\.xls|\.xlsx)$/i, :allow_blank => true
 
-    after_save :parse_excel_report
+    after_create :parse_excel_report
+
+    scope :unparsed, where(:parsed => false)
+    scope :parsed, where(:parsed => true)
   end
   
   protected

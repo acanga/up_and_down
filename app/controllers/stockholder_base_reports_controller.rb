@@ -1,5 +1,5 @@
 class StockholderBaseReportsController < InheritedResources::Base
-  respond_to :html, :json, :xml, :js
+  actions :all, :except => [ :edit, :update, :show, :destroy ]
 
   before_filter :authenticate_user!
 
@@ -7,6 +7,17 @@ class StockholderBaseReportsController < InheritedResources::Base
     @stockholder_base_report = StockholderBaseReport.new
     
     index!
+  end
+
+  def create
+    @stockholder_base_reports = current_user.stockholder_base_reports
+    @stockholder_base_report = current_user.stockholder_base_reports.new(params[:stockholder_base_report])
+
+    if @stockholder_base_report.save
+      redirect_to stockholder_base_reports_path
+    else
+      render :action => :index
+    end
   end
   
   protected

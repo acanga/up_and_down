@@ -1,9 +1,9 @@
-<%= form_for(@stockholder_base_report, :remote => true) do |f| %>
-  <%= render :partial => "resource_errors", :locals => { :resource => @stockholder_base_report } %>
-  
+<%= form_for(@stockholder_base_report) do |f| %>  
   <div>
-    <%= f.label :excel_report, "Arquivo (formato .xls ou .xlsx)" %><br>
     <%= f.file_field :excel_report %>
-    <%= f.submit "Cadastrar", :class => :cadastrar %>
+  </div>
+
+  <div id="upload_feedback" class="error">
+    <%= @stockholder_base_report.errors[:excel_report].to_sentence %>
   </div>
 <% end %>
