@@ -23,3 +23,6 @@ module UpAndDown
     config.assets.initialize_on_precompile = false
   end
 end
+
+require_dependency File.join(Rails.root, "lib", "excel")
+require_dependency File.join(Rails.root, "lib", "excelx")
