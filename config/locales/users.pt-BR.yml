@@ -7,3 +7,9 @@
         password: "Senha"
         password_confirmation: "confirmação de senha"  
         remember_me: "Manter logado"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              not_found: "email não encontrado."    
