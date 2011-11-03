@@ -1,4 +1,16 @@
 <tr>
-  <td colspan="2"><%= link_to "Cadastrar", new_user_registration_path %> | 
-  <%= link_to "Esqueci minha senha", new_user_password_path %></td>
-</tr> 
+  <% if params[:controller] == 'devise/sessions' %>
+    <td colspan="2"><%= link_to "Cadastrar", new_user_registration_path %> | 
+    <%= link_to "Esqueci minha senha", new_user_password_path %></td>                               
+  <% end %>                                           
+  
+  <% if params[:controller] == 'devise/registrations' %>
+    <td colspan="2"><%= link_to "Login", new_user_session_path %> |                                 
+    <%= link_to "Esqueci minha senha", new_user_password_path %></td>                                     
+  <% end %>                                                          
+  
+  <% if params[:controller] == 'devise/passwords' %>
+    <td colspan="2"><%= link_to "Login", new_user_session_path %> |  
+    <%= link_to "Cadastrar", new_user_registration_path %></td>                               
+  <% end %>    
+</tr>
