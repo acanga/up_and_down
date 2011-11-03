@@ -232,7 +232,7 @@
 
       messages:
         taken: "já está em uso"
-        record_invalid: "A validação falhou: %{errors}"
+        record_invalid: "A validação falhou: %{errors}" 
         <<: *errors_messages
 
       full_messages:
