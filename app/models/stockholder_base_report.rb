@@ -3,4 +3,6 @@ class StockholderBaseReport < ActiveRecord::Base
   has_many :stockholders
 
   include StockholderBaseReport::ExcelReport
+
+  has_paper_trail
 end
