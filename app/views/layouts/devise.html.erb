@@ -18,8 +18,8 @@
         <a href="#"><%= image_tag("logo_up_down.png", :border => :none) %></a>
       </div><br clear="all" />
         
-      <div id="login">  
-        <%= yield %>
+      <div class="login" id="<%= id_for_main_content_block %>">  
+        <%= yield %> 
       </div>
     </div>
   </body>

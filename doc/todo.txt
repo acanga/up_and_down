@@ -1,6 +1,5 @@
-Melhorar tamanho do box de login/cadastro pra ficar menor quando possível
-Trocar o ícone da página de cadastro OKA
-Recarregar a página principal a cada 15 segundos
-Mudar link sair pra ficar verde quando o mouse passar em cima OKA
 Incluir validação que impede inserir o mesmo arquivo
-Incluir link pra página de login e esqueci minha senha na página de cadastro  OKA
+Melhorar tamanho do box de login/cadastro pra ficar menor quando possível  [DONE]
+Trocar o ícone da página de cadastro [DONE]
+Mudar link sair pra ficar verde quando o mouse passar em cima [DONE]
+Incluir link pra página de login e esqueci minha senha na página de cadastro  [DONE]
