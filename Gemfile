@@ -9,6 +9,7 @@ gem "carrierwave"
 gem "rubyzip"
 gem "roo"
 gem "resque", :require => 'resque/server' 
+gem "paper_trail"
 
 group :development do
   gem "sqlite3"
