@@ -1,6 +1,6 @@
 <%= page "Relatório de Movimentação dos Acionistas", :javascripts => "stockholder_base_reports" %>
 
-<% if @stockholder_base_reports.count > 0 %>
+<% if current_user.stockholder_base_reports.count > 0 %>
   <%= render :partial => "new_stockholder_base_report_and_comparison_table" %>
 <% else %>
   <%= render :partial => "first_stockholder_base_report" %>

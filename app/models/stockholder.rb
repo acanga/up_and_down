@@ -8,23 +8,23 @@ class Stockholder < ActiveRecord::Base
 
   has_paper_trail
 
-  def self.create_or_update_from_excel_row(excel_row)
+  def self.create_or_update_from_excel_row(excel_row, data = {})
     stockholder = Stockholder.where(:name => excel_row[0]).first
 
     if stockholder
-      stockholder.update_from_excel_row excel_row
+      stockholder.update_from_excel_row excel_row, :uploaded_on => data[:uploaded_on]
     else
-      create_from_excel_row excel_row
+      create_from_excel_row excel_row, :uploaded_on => data[:uploaded_on]
     end
   end
 
-  protected
-    def self.create_from_excel_row(excel_row)
-      create attributes_hash_from_excel_row(excel_row) 
-    end
+  def update_from_excel_row(excel_row, data = {})
+    update_attributes Stockholder.attributes_hash_from_excel_row(excel_row).merge({ :stockholder_base_report_id => data[:uploaded_on].id })
+  end
 
-    def update_from_excel_row(excel_row)
-      update_attributes Stockholder.attributes_hash_from_excel_row(excel_row) 
+  protected
+    def self.create_from_excel_row(excel_row, data = {})
+      create attributes_hash_from_excel_row(excel_row).merge({ :stockholder_base_report_id => data[:uploaded_on].id })
     end
 
     def self.attributes_hash_from_excel_row(excel_row)

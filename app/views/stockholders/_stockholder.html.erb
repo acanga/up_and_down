@@ -1,10 +1,6 @@
 <tr>
   <td><%= stockholder.name %></td>
-  <td>Física</td>
-  <td>108307307-96</td>
-  <td class="cor_azul">45</td>
-  <td class="cor_verde">5</td>
-  <td class="cor_vermelha">70</td>
-  <td class="cor_azul">6</td>
-  <td>115</td>
+  <td><%= stockholder.kind %></td>
+  <td><%= stockholder.cpf_or_cnpj %></td>
+  <%= diff_columns_for stockholder %>
 </tr>

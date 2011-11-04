@@ -8,7 +8,8 @@
     <th>QUANTIDADE AÇÕES ON</th>
     <th>% ON</th>
     <th>TOTAL (PN + ON)</th>
+    <th>% TOTAL</th>
   </tr>
 
-  <%= render :partial => "stockholders/stockholder", :collection => stockholders %>
+  <%= render :partial => "stockholders/stockholder", :collection => current_user.stockholder_base_reports.last.stockholders %>
 </table>

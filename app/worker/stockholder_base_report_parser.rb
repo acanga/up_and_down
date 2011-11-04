@@ -8,7 +8,8 @@ class StockholderBaseReportParser
     excel_report_file.default_sheet = excel_report_file.sheets.first
     
     6.upto(excel_report_file.last_row - 1) do |row|
-      stockholder_base_report.stockholders.create_or_update_from_excel_row excel_report_file.row(row)
+      # stockholder_base_report.stockholders.create_or_update_from_excel_row excel_report_file.row(row)
+      Stockholder.create_or_update_from_excel_row excel_report_file.row(row), :uploaded_on => stockholder_base_report
     end
 
     stockholder_base_report.update_attribute(:parsed, true)

@@ -6,8 +6,8 @@
 
 <br>
 
-<% if StockholderBaseReport.parsed.any? %> 
+<% if StockholderBaseReport.last.parsed %> 
   <br>
   
-  <%= render :partial => "stockholders/stockholders", :locals => { :stockholders => current_user.stockholders } %>
+  <%= render :partial => "stockholders/stockholders" %>
 <% end %>
