@@ -6,6 +6,8 @@ class Stockholder < ActiveRecord::Base
   validates_presence_of :name, :kind, :cpf_or_cnpj, :amount_of_stocks_on,
     :on_percentage, :amount_of_stocks_pn, :pn_percentage, :total_stocks
 
+  has_paper_trail
+
   def self.create_or_update_from_excel_row(excel_row)
     stockholder = Stockholder.where(:name => excel_row[0]).first
 
