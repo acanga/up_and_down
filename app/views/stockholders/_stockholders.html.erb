@@ -11,5 +11,5 @@
     <th>% TOTAL</th>
   </tr>
 
-  <%= render :partial => "stockholders/stockholder", :collection => current_user.stockholder_base_reports.last.stockholders %>
+  <%= render :partial => "stockholders/stockholder", :collection => current_user.stockholder_base_reports.parsed.last.stockholders %>
 </table>
