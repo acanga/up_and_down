@@ -23,3 +23,7 @@ end
 group :production do
   gem "pg"
 end
+
+group :staging do
+  gem "mysql2"
+end
