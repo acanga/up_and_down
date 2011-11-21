@@ -23,3 +23,14 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
+
+staging:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: up_and_down_staging
+  pool: 5
+  username: desenv
+  password: desenv
+  host: 52.0.40.20
+  socket: /lasa/BASES/MYSQL/mysql.sock
