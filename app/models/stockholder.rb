@@ -30,7 +30,7 @@ class Stockholder < ActiveRecord::Base
     def self.attributes_hash_from_excel_row(excel_row)
       cpf_or_cnpj = excel_row[2].to_s
 
-      if excel_row[1].trim.length == 14
+      if excel_row[1].strip.length == 14
         kind = "Pessoa Jurídica"
       else
         kind = "Pessoa Física"
